@@ -1,25 +1,5 @@
 <?php
-server {
-    listen 80;
-    client_max_body_size 4G;
- 
-    access_log /var/sites/webapp/logs/access.maintenance.log;
-    error_log /var/sites/webapp/logs/error.maintenance.log info;
- 
-    server_name api.webapp.com;
- 
-    # this guy redirects any path to /api.json
-    rewrite ^.*$ /api.json last;
- 
-    location / {
-        root /var/sites/webapp/webapp/;
-        index api.json /api.json;
- 
-        # this is the magic
-        error_page 405 = $uri;
-    }
- 
-}
+
 $errors         = array();  	// array to hold validation errors
 $data 			= array(); 		// array to pass back data
 
