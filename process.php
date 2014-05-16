@@ -31,7 +31,7 @@ $data 			= array(); 		// array to pass back data
 		// THIS CAN BE WHATEVER YOU WANT TO DO (LOGIN, SAVE, UPDATE, WHATEVER)
 
 }
-if (isset($_POST['name'], $_POST['mobile'])) {
+if (isset($_POST['name'], $_POST['mobile'], $_POST['preferredGateway'])) {
 	echo 'Your name is ' . $_POST['name'];
 }
 		// show a message of success and provide a true success variable
