@@ -4,6 +4,8 @@ $('form.ajax').on('submit', function() {
 	method=that.attr('method'),
 	data={};
 
+	@HeaderParam("content-type") String content-type=application/json
+
 that.find('[name]').each(function(index, value) {
 	var that = $(this),
 	name = that.attr('name'),
