@@ -1,21 +1,45 @@
+<!doctype html>
 <html>
 <head>
-	<title>Waiting For Bitcoin Cards</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> <!-- load bootstrap via CDN -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!-- load jquery via CDN -->
+	<script src="magic.js"></script> <!-- load our javascript file -->
 </head>
 <body>
-	<form action="contact.php" method="post">
-		<div>
-			<input type="text" name="name" placeholder="Your name">
-		</div>
-		<div>
-			<input type="text" name="mobile" placeholder="18645551234">
-		</div>
-			<div>
-			<input type="text" name="preferredGateway" placeholder="4RADSPD5XT9ULC5Z">
-		</div>
-		<input type="submit" value="Get Cards">
+<div class="col-sm-6 col-sm-offset-3">
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
-	</html>
+
+
+	<!-- OUR FORM -->
+	<form action="process.php" method="POST">
+
+		<!-- NAME -->
+		<div id="name-group" class="form-group">
+			<label for="name">Your Name</label>
+			<input type="text" class="form-control" name="name" placeholder="Henry Pym">
+			<!-- errors will go here -->
+		</div>
+
+		<!-- mobile -->
+		<div id="mobile-group" class="form-group">
+			<label for="mobile">Texting Phone Number</label>
+			<input type="text" class="form-control" name="mobile" placeholder="18645551234">
+			<!-- errors will go here -->
+		</div>
+
+		<!-- preferredGateway ALIAS -->
+		<div id="preferredGateway-group" class="form-group">
+			<label for="preferredGateway">Preferred Gateway</label>
+			<input type="text" class="form-control" name="preferredGateway" placeholder="4RADSPD5XT9ULC5Z">
+			<!-- errors will go here -->
+		</div>
+
+		<button type="submit" class="btn btn-success">Get Cards <span class="fa fa-arrow-right"></span></button>
+
+	</form>
+
+</div>
+</body>
+</html>
